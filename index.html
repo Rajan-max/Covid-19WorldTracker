@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID19 World Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>  
+    <header>
+        <div class="header__logo">
+            Covid-19 World Tracker
+        </div>
+    </header>
+
+    <div class="search">
+        <h2>Select a Country</h2>
+        <select name="countries" id="userIn" class="search__input">
+            <option value="Global">Global</option>
+        </select>
+    </div>
+
+    <div class="results">
+        <div class="results__card">
+            <div class="results__info">
+                <h3>Cases</h3>
+                <p id="confirmed"></p>
+                <span id="newCases"></span>
+            </div>
+        </div>
+        <div class="results__card">
+            <div class="results__info">
+                <h3>Deaths</h3>
+                <p id="deaths"></p>
+                <span id="newDeaths"></span>
+
+            </div>
+        </div>
+        <div class="results__card">
+            <div class="results__info">
+                <h3>Recovered</h3>
+                <p id="recovered"></p>
+                <span id="newRecov"></span>
+
+            </div>
+        </div>
+    </div>
+
+
+    <h2 class="guidlines">Advices</h2>
+    <section class="advices">
+        <div class="advices__box cLevel-2">
+            <div class="advices__content">
+                <img src="img/hand-wash2.png" alt="">
+                <p>Wash your hands with water and soap. Let me see that lather</p>
+            </div>
+        </div>
+
+        <div class="advices__box rLevel-2">
+            <div class="advices__content">
+                <img src="img/cold.png" alt="">
+                <p>When coughing or sneezing, cover mouth and nose with the inner part of your elbow or some tissue</p>
+            </div>
+        </div>
+
+        <div class="advices__box">
+            <div class="advices__content">
+                <img src="img/distance.png" alt="">
+                <p>If you really do have to go outside, keep social distance with everyone, 6 feet back bro!</p>
+            </div>
+        </div>
+
+        <div class="advices__box rLevel-2">
+            <div class="advices__content">
+                <img src="img/flight.png" alt="">
+                <p>Avoid travel if you have symptoms, I mean, do not travel at all. These are not vacations</p>
+            </div>
+        </div>
+
+        <div class="advices__box cLevel-3">
+            <div class="advices__content">
+                <img src="img/diet.png" alt="">
+                <p>We are what we eat. While you are in lockdown, eat as healthy as you can</p>
+            </div>
+        </div>
+
+        <div class="advices__box">
+            <div class="advices__content">
+                <img src="img/coronavirus.png" alt="">
+                <p>I know, I know, you are so handsome you can not keep yours hands off you.
+                    But please, do not touch your eyes, nose and mouth
+                </p>
+            </div>
+        </div>
+
+        <div class="advices__box">
+            <div class="advices__content">
+                <img src="img/stay-at-home.png" alt="">
+                <p>Stay at home, is the only thing you can control</p>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="habits">
+        <h2>habits</h2>
+        <h3>
+            There's never been a better time to build healthy and long-lasting habits.
+            We can all emerge from this crisis stronger and better than before, can't we?
+        </h3>
+
+        <div class="habits__container">
+            <div class="habits__card">
+                <div class="habits__face habits__face--face1">
+                    <div class="habits__content">
+                        <img src="img/yoga-color.png" alt="">
+                        <h3>Meditate</h3>
+                    </div>
+                </div>
+                <div class="habits__face habits__face--face2">
+                    <div class="habits__content">
+                        <p>Mediation trains a part of your brain that's responsible for willpower and self control. This means you are able to control better your emotions, you can focus better and longer. Also provides a sense of general well-being, really important nowadays</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="habits__card">
+                <div class="habits__face habits__face--face1">
+                    <div class="habits__content">
+                        <img src="img/book-color.png" alt="">
+                        <h3>Read a book</h3>
+                    </div>
+                </div>
+                <div class="habits__face habits__face--face2">
+                    <div class="habits__content">
+                        <p>
+                            Reading financial education books would give you a better understanding about the current world situation. It would teach you about the best things you can do to improve your financial situation or any other area of your life.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="habits__card">
+                <div class="habits__face habits__face--face1">
+                    <div class="habits__content">
+                        <img src="img/gym-color.png" alt="">
+                        <h3>Make Excercise</h3>
+                    </div>
+                </div>
+                <div class="habits__face habits__face--face2">
+                    <div class="habits__content">
+                        <p>Who doesn't want to look sexy and fit, even in pijama and wearing crocs. Exercise at home can be a great way to relief all the tension and uncertainty you may be feeling right now. Your overall mood will be a lot better</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="habits__card">
+                <div class="habits__face habits__face--face1">
+                    <div class="habits__content">
+                        <img src="img/cooking.png" alt="">
+                        <h3>Cooking</h3>
+                    </div>
+                </div>
+                <div class="habits__face habits__face--face2">
+                    <div class="habits__content">
+                        <p>Remember that advice about eating as healthy as you can? Well
+                            if you are able to make your own meals, having a good diet will be a piece of cake, and you can save some money too. You can also have a great time cooking
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="habits__card">
+                <div class="habits__face habits__face--face1">
+                    <div class="habits__content">
+                        <img src="img/guitar.png" alt="">
+                        <h3>Learn something new</h3>
+                    </div>
+                </div>
+                <div class="habits__face habits__face--face2">
+                    <div class="habits__content">
+                        <p>Getting into something new is always hella fun, you can enjoy discovering things you love doing. It could be playing an instrument, painting, make sick-looking drawings, or getting a new skill that can get you some money. More on that later</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="habits__card">
+                <div class="habits__face habits__face--face1">
+                    <div class="habits__content">
+                        <img src="img/laptop.png" alt="">
+                        <h3>Sharpening Yourself</h3>
+                    </div>
+                </div>
+                <div class="habits__face habits__face--face2">
+                    <div class="habits__content">
+                        <p>Pick up a new skill that could upgrade your brain even during this period of uncertainty. Something that is recesion-proof and could be done remotely. And you know what recesion is because you have been reading about it, don't you? </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="habits__disclaimer">
+            <h4>Disclaimer:</h4>
+            I do not recommend trying to build more than two habits at once even if you have time. It could become overwhelming and you'll end up doing nothing. Go little by little, prioritize the habits that can help you the most right now.
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="footer__quote">
+            <p>
+                Because even though the world is on pause,
+                you don't have to be.
+            </p>
+            
+            <div class="footer__credits">
+                Created by <a href="https://github.com/Rajan-max">Rajan Jayswal</a> & <a href="https://github.com/ayush-20">Ayush Bhagat</a>
+                <br>
+                jaiswalrajan460@gmail.com</p>
+                <p class="footer__copy">ayushkb30@gmail.com</p>
+                
+            </div>
+        </div>
+
+        <div class="footer__form">
+            <form data-netlify="true" action="https://docs.google.com/forms/u/3/d/e/1FAIpQLSedC9RvFbJJfql6E-ze0E12C4-Y9KlmFHJ7shqLhK-zS5dimg/formResponse"
+            target="_self" method="POST">
+
+                <label>
+                    Get more advices and tips to make the best out of this situation
+                </label>
+                <input type="text" required placeholder="Your Name" name="entry.2028974346">
+                <input type="email" required placeholder="Your Email" name="emailAddress">
+
+                <input type="submit" value="Submit">
+
+               <!-- <a href="https://us4.admin.mailchimp.com/landing-pages/preview-published?id=29578"><button class="btn btn-primary btn-xl">Submit</button></a> -->
+
+               <!--<a href="https://stackoverflow.com/questions/2906582/how-to-create-an-html-button-that-acts-like-a-link"><input type="submit" value="Submit"></a>-->
+
+            </form>
+        </div>
+    </footer>
+
+
+    <script src="main.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+</html>

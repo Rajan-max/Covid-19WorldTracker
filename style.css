@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #222;
+    font-family: 'Rubik', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    background-color: slateblue;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.header__logo {
+    color: #000000;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.search {
+    color: slateblue;
+    width: 90%;
+    max-width: 1100px;
+    text-align: center;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 20px;
+}
+
+
+.search__input {
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+    padding: 10px;
+    border: 2px solid slateblue;    
+    background-color: #30475e;
+    /* background-color: rgba(255,255,255,0.1); */
+    outline: none;
+    color: snow;
+    font-size: 20px;
+    font-family: 'Rubik';
+}
+
+.results {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 10px;
+}
+
+.results__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222;
+    opacity: 0;
+    height: 0;
+    position: relative;
+}
+
+.results__card.show {
+    animation-name: showing;
+    animation-duration: 1s;
+    animation-delay: 0;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+@keyframes showing {
+    0% {
+        transform: translateX(-900px);
+        opacity: 0;
+        height: 0;
+    }
+    50% {
+        height: 300px;
+    }
+    100% {
+
+        transform: translateX(0);
+        opacity: 1;
+        height: 300px;
+
+    }
+}
+
+.results__info {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.results__info h3 {
+    color: slateblue;
+    padding: 5px;
+}
+.results__info p {
+    color: #ffffff;
+    margin-top: 20px;
+}
+
+.results__info span {
+    margin-top: 40px;
+    font-size: 1.2rem;
+}
+
+#newCases {
+    color: steelblue;
+}
+
+#newDeaths {
+    color: tomato;
+}
+
+#newRecov {
+    color: teal;
+}
+
+h2.guidlines {
+    color: slateblue;
+    margin-top: 50px;
+    text-transform: uppercase;
+}
+.advices {
+    position: relative;
+    display: grid;
+    max-width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-flow: dense;
+    grid-auto-rows: minmax(100px, auto);
+    margin: 40px;
+    grid-gap: 10px;
+}
+
+.advices__box {
+    color: #fff;
+    background-color: #222831;
+    padding: 20px;
+    text-align: center;
+    vertical-align: middle;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.advices__box:hover {
+    background-color: #e91e63;
+}
+
+.advices__content img {
+    margin-bottom: 10px;
+    max-width: 100px;
+}
+.habits {
+    width: 100%;
+}
+
+.habits > h3 {
+    text-align: center;
+    color: snow;
+    margin-bottom: 10px;
+}
+.habits h2 {
+    text-align: center;
+    text-transform: uppercase;
+    color: slateblue;
+    margin-bottom: 20px;
+}
+.habits__container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    justify-items: center;
+    gap: 20px;
+}
+
+.habits__face {
+    min-height: 200px;
+    transition: 0.5s;
+}
+
+.habits__face--face1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(100px);
+    background-color: #30475e;
+    z-index: 1;
+    position: relative;
+}
+
+.habits__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.habits__content img {
+    max-width: 100px;
+}
+
+.habits__content h3 {
+    text-align: center;
+    margin-left: 5px;
+}
+
+.habits__face--face2 {
+    background-color: snow;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    transform: translateY(-100px);
+
+}
+
+.habits__card:hover .habits__face--face1 {
+    transform: translateY(0);
+    background-color: #e91e63;
+    color: snow;
+}
+
+.habits__card:hover .habits__face--face2 {
+    transform: translateY(0);
+
+}
+
+.habits__disclaimer {
+    color: snow;
+    font-size: 12px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+footer {
+    margin-top: 30px;
+    width: 100%;
+    min-height: 300px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around; 
+    align-items: stretch;
+    background-color: slateblue;
+    
+}
+
+
+.footer__form form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footer__form form label {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin: 20px 0;
+}
+
+.footer__form input {
+    border: 1px solid snow;
+    background: rgba(255, 255, 255, 0.2);
+    outline: none;
+    border-radius: 5px;
+    padding: 7px;
+    font-family: 'Rubik';
+    color: snow;
+    font-size: 1.1rem;
+    align-self: stretch;
+    margin: 10px 0;
+
+    
+}
+
+.footer__form input::placeholder {
+    color: snow;
+}
+
+.footer__form input[type='submit'] {
+    background-color: #30475e;
+    border: none;
+    cursor: pointer;
+}
+
+.footer__quote {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    font-size: 1.3rem;
+    color: snow;
+}
+
+.footer__quote p {
+    width: 70%;
+}
+
+.footer__credits {
+    color: #000000;
+}
+
+.footer__credits a {
+    text-decoration: none;
+    color: yellow;
+}
+
+@media screen and (min-width: 870px) {
+    .cLevel-2 {
+        grid-column: span 2 / auto;
+    }
+    
+    .cLevel-3 {
+        grid-column: span 3 / auto;
+    }
+    
+    .rLevel-2 {
+        grid-row: span 2 / auto;
+    }
+}
+
+@media screen and (max-width: 870px) {
+    .advices {
+        margin: 10px;
+    }
+    
+    footer {
+        flex-direction: column;
+    }
+
+    .footer__form {
+        order: -1;
+    }
+    
+    .footer__quote {
+        align-items: center;
+    }
+
+    .footer__quote p {
+        width: 100%;
+        margin: 30px auto;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 341px) {
+    .results {
+        width: 100%;
+        margin: 0;
+        grid-template-columns: 1fr;
+    }
+}
